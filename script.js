@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (savedTime !== null) {
 			const timeSpan = document.querySelector(`#time-${input.id.split("-")[1]}`);
 			timeSpan.textContent = savedTime;
+			timeSpan.style.color = "red";
 		}
 	});
 
@@ -21,7 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 				input.style.borderColor = "red";
 				const timeSpan = document.querySelector(`#time-${input.id.split("-")[1]}`);
 				const currentTime = new Date().toLocaleTimeString();
-				timeSpan.textContent = `Last input at: ${currentTime}`;
+				timeSpan.textContent = `Emprestado às: ${currentTime}`;
+				timeSpan.style.color = "red";
 
 				// Save data to localStorage
 				localStorage.setItem(input.id, input.value + event.key);
@@ -30,10 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 
 		input.addEventListener("input", () => {
+			
+			const timeSpan = document.querySelector(`#time-${input.id.split("-")[1]}`);
 			if (input.value === "") {
 				input.style.borderColor = "";
-				const timeSpan = document.querySelector(`#time-${input.id.split("-")[1]}`);
-				timeSpan.textContent = "";
+				timeSpan.textContent = "Disponível";
+				timeSpan.style.color = "";
 
 				// Remove data from localStorage
 				localStorage.removeItem(input.id);
