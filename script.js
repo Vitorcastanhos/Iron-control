@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 
 		input.addEventListener("input", () => {
-			
 			const timeSpan = document.querySelector(`#time-${input.id.split("-")[1]}`);
 			if (input.value === "") {
 				input.style.borderColor = "";
