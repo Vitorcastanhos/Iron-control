@@ -1,3 +1,4 @@
+/* Reset and basic setup */
 * {
 	margin: 0;
 	padding: 0;
@@ -5,24 +6,44 @@
 }
 :root {
 	font-size: 62.5%;
-	--primary-color: #0AAF33;
-	--secondary-color: #DAE5D0;
-	--highlight-color: #FFD700;
-	--alert-color: #FF4500;
-	--background-color: #F4F4F9;
+	--primary-color: #0aaf33;
+	--secondary-color: #057fc3;
+	--highlight-color: #ffd700;
+	--alert-color: #ff4500;
+	--background-color: #fefefe;
+	--text-color: #fefefe;
 	--font-color: #333;
 }
 body {
-	font-size: 1.6rem;
 	background-color: var(--background-color);
+	font-size: 1.6rem;
 	color: var(--font-color);
 	font-family: Arial, sans-serif;
+	padding: 2rem;
+}
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--background-color); /* If you need a background color for the header */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10rem;
+	z-index: 1000; /* Ensure header stays on top */
+}
+#logo {
+	width: auto;
+	/* height: 100%; */
+	max-height: 35rem;
 }
 #app {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	display: flex;
+	flex-wrap: wrap;
 	gap: 2rem;
-	padding: 2rem;
+	justify-content: center;
+	margin-top: 10rem;
 }
 h1 {
 	display: flex;
@@ -31,7 +52,9 @@ h1 {
 	font-size: 3rem;
 	font-weight: 700;
 	padding: 1rem;
-	color: var(--primary-color);
+	color: var(--text-color);
+	width: 100%;
+	text-align: center;
 }
 .iron-01 {
 	display: flex;
@@ -43,6 +66,8 @@ h1 {
 	padding: 2rem;
 	background-color: var(--secondary-color);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	flex: 1 1 30rem;
+	max-width: 40rem;
 }
 input[type="number"] {
 	max-width: 12rem;
@@ -72,6 +97,10 @@ h1 img {
 	height: 50px;
 	margin-left: 1.5rem;
 }
+#logo {
+	width: 100%;
+	max-width: 300px;
+}
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -97,9 +126,6 @@ h1 img {
 	}
 }
 @media (max-width: 500px) {
-	#app {
-		grid-template-columns: 1fr;
-	}
 	h1 {
 		font-size: 1.8rem;
 	}

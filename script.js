@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (!isNaN(event.key) && event.key !== " ") {
 				input.style.borderColor = "var(--highlight-color)";
 				const timeSpan = document.querySelector(`#time-${input.id.split("-")[1]}`);
-				const currentTime = new Date().toLocaleTimeString();
+				const currentTime = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 				timeSpan.textContent = `Emprestado às: ${currentTime}`;
 				timeSpan.style.color = "var(--highlight-color)";
 
