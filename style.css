@@ -6,7 +6,7 @@
 }
 :root {
 	font-size: 62.5%;
-	--primary-color: #0aaf33;
+	--primary-color: #08f543;
 	--secondary-color: #057fc3;
 	--highlight-color: #ffd700;
 	--alert-color: #ff4500;
@@ -18,7 +18,7 @@ body {
 	background-color: var(--background-color);
 	font-size: 1.6rem;
 	color: var(--font-color);
-	font-family: Arial, sans-serif;
+	font-family: "Roboto", sans-serif;
 	padding: 2rem;
 }
 #header {
@@ -35,8 +35,7 @@ body {
 }
 #logo {
 	width: auto;
-	/* height: 100%; */
-	max-height: 35rem;
+	height: 35rem;
 }
 #app {
 	display: flex;
