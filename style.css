@@ -81,9 +81,9 @@ input[type="number"] {
 	font-weight: 700;
 	transition: border-color 0.3s;
 }
-input[type="number"]:focus {
+/* input[type="number"]:focus {
 	border-color: var(--highlight-color);
-}
+} */
 .time-display {
 	font-size: 2.5rem;
 	font-weight: 700;

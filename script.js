@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
 				if (elapsedTime < 3600000) {
 					setTimeout(() => {
 						timeSpan.style.color = "var(--alert-color)";
+						input.style.borderColor = "var(--alert-color)";
 					}, 3600000 - elapsedTime);
 				} else {
 					timeSpan.style.color = "var(--alert-color)";
+					input.style.borderColor = "var(--alert-color)";
 				}
 			}
 		}
