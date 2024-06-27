@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				// Schedule the time color change
 				setTimeout(() => {
 					timeSpan.style.color = "var(--alert-color)";
+					input.style.borderColor = "var(--alert-color)";
 				}, 3600000);
 			}
 		});
