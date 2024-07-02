@@ -1,9 +1,9 @@
-/* Reset and basic setup */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
 :root {
 	font-size: 62.5%;
 	--primary-color: #08f543;
@@ -15,36 +15,42 @@
 	--text-color: #fefefe;
 	--font-color: #333;
 }
+
 body {
 	background-color: var(--background-color);
 	font-size: 1.6rem;
 	color: var(--font-color);
 	font-family: "Roboto", sans-serif;
-	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
+
 #header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: var(--background-color); /* If you need a background color for the header */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 10rem;
-	z-index: 1000; /* Ensure header stays on top */
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0;
 }
+
 #logo {
-	width: auto;
-	height: 30rem;
+	height: 7rem;
+	width: 100%;
+	max-width: 60rem;
 }
-#app {
+
+#boxes {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 2rem;
 	justify-content: center;
-	margin-top: 10rem;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+	padding: 2rem;
 }
+
 h1 {
 	display: flex;
 	justify-content: center;
@@ -56,19 +62,20 @@ h1 {
 	width: 100%;
 	text-align: center;
 }
-.iron-01 {
+
+.boxes {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 1.5rem;
 	border-radius: 10px;
 	padding: 2rem;
 	background-color: var(--secondary-color);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	flex: 1 1 30rem;
-	max-width: 40rem;
+	flex: 1 1 35rem;
+	max-width: 35rem;
 }
+
 input[type="number"] {
 	max-width: 12rem;
 	height: 5rem;
@@ -82,9 +89,7 @@ input[type="number"] {
 	font-weight: 700;
 	transition: border-color 0.3s;
 }
-/* input[type="number"]:focus {
-	border-color: var(--highlight-color);
-} */
+
 .time-display {
 	font-size: 2.5rem;
 	font-weight: 700;
@@ -92,28 +97,25 @@ input[type="number"] {
 	color: var(--primary-color);
 	transition: color 0.3s;
 }
+
 h1 img {
 	width: 50px;
 	height: 50px;
 	margin-left: 1.5rem;
 }
-#logo {
-	width: 100%;
-	max-width: 300px;
-}
+
 footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	background-color: var(--footer-color);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem;
-	font-size: 1.4rem;
+	width: 100%;
+	text-align: center;
 	font-weight: 700;
+	font-size: 1.4rem;
+	padding: 1rem;
 	color: var(--text-color);
+	background-color: var(--footer-color);
+	margin-top: auto;
 }
 
 /* Responsive Design */
@@ -128,6 +130,7 @@ footer {
 		font-size: 2.2rem;
 	}
 }
+
 @media (max-width: 800px) {
 	h1 {
 		font-size: 2rem;
@@ -139,6 +142,7 @@ footer {
 		font-size: 2rem;
 	}
 }
+
 @media (max-width: 500px) {
 	h1 {
 		font-size: 1.8rem;
