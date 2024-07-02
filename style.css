@@ -114,7 +114,7 @@ footer {
 	font-size: 1.4rem;
 	padding: 1rem;
 	color: var(--text-color);
-	background-color: var(--footer-color);
+	background-color: var(--secondary-color);
 	margin-top: auto;
 }
 
